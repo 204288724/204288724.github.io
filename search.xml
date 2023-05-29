@@ -26,11 +26,121 @@
 ]]></content>
   </entry>
   <entry>
+    <title>漏洞发现-操作系统</title>
+    <url>/2022/08/24/%E6%BC%8F%E6%B4%9E%E5%8F%91%E7%8E%B0---%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E6%BC%8F%E6%B4%9E%E6%8E%A2%E9%92%88%E7%B1%BB%E5%9E%8B%E5%88%A9%E7%94%A8%E4%BF%AE%E5%A4%8D/</url>
+    <content><![CDATA[<h2 id="一、探针"><a href="#一、探针" class="headerlink" title="一、探针"></a>一、探针</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824153543382.png" alt="image-20220824153543382"></p>
+<h2 id="二、类型"><a href="#二、类型" class="headerlink" title="二、类型"></a>二、类型</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824155340113.png" alt="image-20220824155340113"></p>
+<h2 id="三、利用"><a href="#三、利用" class="headerlink" title="三、利用"></a>三、利用</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824155717274.png" alt="image-20220824155717274"></p>
+<h2 id="四、修复"><a href="#四、修复" class="headerlink" title="四、修复"></a>四、修复</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824162049639.png" alt="image-20220824162049639"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>漏洞发现-APP应用</title>
     <url>/2022/08/25/%E6%BC%8F%E6%B4%9E%E5%8F%91%E7%8E%B0-app%E5%BA%94%E7%94%A8%E4%B9%8B%E6%BC%8F%E6%B4%9E%E6%8E%A2%E9%92%88%E7%B1%BB%E5%9E%8B%E5%88%A9%E7%94%A8%E4%BF%AE%E5%A4%8D/</url>
     <content><![CDATA[<h2 id="一、抓包"><a href="#一、抓包" class="headerlink" title="一、抓包"></a>一、抓包</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220825142750976.png" alt="image-20220825142750976"></p>
 <h2 id="二、协议"><a href="#二、协议" class="headerlink" title="二、协议"></a>二、协议</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220825151551328.png" alt="image-20220825151551328"></p>
 <h2 id="三、逆向"><a href="#三、逆向" class="headerlink" title="三、逆向"></a>三、逆向</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220825151605101.png" alt="image-20220825151605101"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/05/29/%E7%AC%AC%E4%B8%80%E8%AF%BE%E6%97%B6%20%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<p>title: 第一课-信息收集<br>date: 2023-05-19</p>
+<h1 id="第一课时-信息收集"><a href="#第一课时-信息收集" class="headerlink" title="第一课时- 信息收集"></a>第一课时- 信息收集</h1><p><strong>信息收集的基本要求</strong></p>
+<p><strong>1、全面</strong></p>
+<p>做到对目标所有的业务面和非业务面的存在点进行全面的信息收集。</p>
+<p><strong>2、准确</strong></p>
+<p>对于收集到的信息尤其是重要的信息再三确认其信息的准确性，对信息的内容中所涉及的技术点要手动查看。（确定是否是其资产）。</p>
+<p><strong>3、时效</strong></p>
+<p>对于收集到的信息要注意信息产生的时间和收集到的时间，是否具有时间差，时间差是否能接受，如果存在失效的信息要及时进行清理。</p>
+<p><strong>4、清晰</strong></p>
+<p>对于收集到的信息要做到逻辑清晰，能清楚的分辨出各个收集到的信息之间的逻辑关系和资产之间的相对位置，对于总体目标要有清晰的资产逻辑和业务逻辑认识。</p>
+<p><strong>信息收集对象（内容）</strong></p>
+<p>服务器ip</p>
+<p>操作系统</p>
+<p>web容器 tomcat jetty weblogic（百度搜索历史漏洞） </p>
+<p>端口</p>
+<p>协议 http https</p>
+<p>cdn</p>
+<p>多地ping</p>
+<p>域名历史解析ip（ip138.com）</p>
+<p>https证书</p>
+<p>域名</p>
+<p>dns</p>
+<p>建站用的语言</p>
+<p>数据库</p>
+<p>框架cms（搜索历史漏洞）</p>
+<p>waf</p>
+<p>代码泄露</p>
+<p>微信小程序</p>
+<p>界面js</p>
+<p>接口</p>
+<p>指纹识别（云悉，fofa，Ehole[c段],潮汐）</p>
+<p><strong>信息收集分类</strong></p>
+<p><strong>1、被动信息收集</strong></p>
+<p>不直接与网站交互，指纹识别等；</p>
+<p>优点：</p>
+<p>1、隐蔽性高，不容易被发现</p>
+<p>2、收集的信息量和覆盖面大</p>
+<p>缺点：</p>
+<p>1、收集到的信息中时效性和准确性不高</p>
+<p>2、无法收集到敏感或者未公开的信息</p>
+<p>google语法搜索</p>
+<p>搜索引擎：</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520170956156.png" alt="image-20230520170956156"></p>
+<p>Fofa-Viewer 快速导出资产工具</p>
+<p>漏洞搜索：</p>
+<p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20230520171003898.png" alt="image-20230520171003898"></p>
+<p>子域名收集工具oneforall</p>
+<p><strong>2、主动信息收集</strong></p>
+<p>基本流程：</p>
+<p>1、由攻击发起的行为或请求</p>
+<p>2、目标受到行为或请求影响并发出反馈</p>
+<p>3、攻击者获得反馈并判断特征</p>
+<p>优点：</p>
+<p>1、容易暴露、被发现风险高</p>
+<p>2、收集的信息量和覆盖面比较少</p>
+<p>目录扫描(过waf，使用代理池)</p>
+<p>绕过CDN常见方式：</p>
+<p>1、测试没有cdn的子站域名、旁站、C段、小程序、app</p>
+<p>2、通过dns历史记录去找最早的记录，可能为真实ip</p>
+<p>dns历史记录查询：</p>
+<p><a href="https://x.threatbook.cn/">https://x.threatbook.cn</a></p>
+<p><a href="https://webiplookup.com/">https://webiplookup.com</a></p>
+<p><a href="https://viewdns.info/iphistory">https://viewdns.info/iphistory</a></p>
+<p><a href="https://sercuritytrails.com/#search">https://sercuritytrails.com/#search</a></p>
+<p><a href="https://toolbar.netcraft.com/site_report">https://toolbar.netcraft.com/site_report</a></p>
+<p>3、cdn就近解析，通过多地ping/国外ping去找真实ip（站长工具）</p>
+<p>4、证书：</p>
+<p><a href="https://search.censys.io/">https://search.censys.io</a></p>
+<p><a href="https://crt.sh/">https://crt.sh/</a></p>
+<p>5、邮件服务器</p>
+<p>cdn不支持邮箱</p>
+<p>6、fofa查询网站标题找真实ip</p>
+<p>7、ajax请求不规范，以真实ip调用</p>
+<p>工具介绍</p>
+<p>ksubdomain</p>
+<p>jsFinder：</p>
+<p>普通爬取</p>
+<p>python JSFinder.py -u  地址 </p>
+<p>深度爬取</p>
+<p>python JSFinder -u 地址 -d</p>
+<p>nmap少量ip或单ip使用：</p>
+<p>-p 指定扫描端口</p>
+<p>-Pn 确定网站存活过防火墙</p>
+<p>masscan批量扫使用</p>
+<p>1、收集主域名</p>
+<p> 搜索引擎  备案网站 AppinfoScanner</p>
+<p>2、子域名</p>
+<p>oneforall  子域名挖掘机 搜索引擎 指纹 dns记录  在线子域名爆破  JSFinder</p>
+<p>3、端口扫描</p>
+<p>nmap  masscan goby </p>
+<p>4、指纹识别</p>
+<p>whatweb  Wappalyzer插件 goby 云悉 潮汐 Ehole glass</p>
+<p>5、目录扫描</p>
+<p>dirsearch   dirmap 7K  御剑   DirBuster  </p>
+<p>6、漏洞扫描</p>
+<p>awvs  xray vulmap appscan  Nessus</p>
 ]]></content>
   </entry>
   <entry>
@@ -40,15 +150,6 @@
 <p><strong>我是小陈</strong>！</p>
 <p><strong>今后让我们一起学习网络安全！</strong></p>
 <p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/%E8%83%8C%E6%99%AF.jpg" alt="背景"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>漏洞发现-操作系统</title>
-    <url>/2022/08/24/%E6%BC%8F%E6%B4%9E%E5%8F%91%E7%8E%B0---%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E6%BC%8F%E6%B4%9E%E6%8E%A2%E9%92%88%E7%B1%BB%E5%9E%8B%E5%88%A9%E7%94%A8%E4%BF%AE%E5%A4%8D/</url>
-    <content><![CDATA[<h2 id="一、探针"><a href="#一、探针" class="headerlink" title="一、探针"></a>一、探针</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824153543382.png" alt="image-20220824153543382"></p>
-<h2 id="二、类型"><a href="#二、类型" class="headerlink" title="二、类型"></a>二、类型</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824155340113.png" alt="image-20220824155340113"></p>
-<h2 id="三、利用"><a href="#三、利用" class="headerlink" title="三、利用"></a>三、利用</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824155717274.png" alt="image-20220824155717274"></p>
-<h2 id="四、修复"><a href="#四、修复" class="headerlink" title="四、修复"></a>四、修复</h2><p><img src="https://cheihei.oss-cn-zhangjiakou.aliyuncs.com/image-20220824162049639.png" alt="image-20220824162049639"></p>
 ]]></content>
   </entry>
 </search>
