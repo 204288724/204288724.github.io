@@ -143,6 +143,47 @@
 ]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/2023/05/29/%E7%AC%AC%E4%BA%8C%E8%AF%BE-%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</url>
+    <content><![CDATA[<hr>
+<p>title：第二课-社会工程学<br>data：2023-05-20</p>
+<hr>
+<h1 id="第二课-社会工程学"><a href="#第二课-社会工程学" class="headerlink" title="第二课-社会工程学"></a>第二课-社会工程学</h1><h2 id="一、水坑攻击"><a href="#一、水坑攻击" class="headerlink" title="一、水坑攻击"></a><strong>一、水坑攻击</strong></h2><p>通过间接性的方式攻击受害者，比如在其经常访问的网站上做手脚</p>
+<h2 id="二、html标签学习"><a href="#二、html标签学习" class="headerlink" title="二、html标签学习"></a><strong>二、html标签学习</strong></h2><p><strong>html</strong></p>
+<p>1、table表格标签</p>
+<p>tr行标签</p>
+<p>td列标签</p>
+<p>rowspan行合并，效果为列合并</p>
+<p>colspan列合并，效果为行合并</p>
+<p>2、img图片标签</p>
+<p>属性：</p>
+<p>src图片地址</p>
+<p>alt图片未加载显示内容</p>
+<p>3、a超链接标签</p>
+<p>属性：</p>
+<p>href跳转位置</p>
+<p>target跳转方式</p>
+<p>4、div盒子标签</p>
+<p>5、标题标签h1-h6</p>
+<p><strong>css</strong></p>
+<p>三种引用方式</p>
+<p>1、style标签引入</p>
+<p>2、link标签引入</p>
+<p>3、行内style引入</p>
+<p>id选择器唯一</p>
+<p>class选择器不唯一</p>
+<p><strong>javascript</strong></p>
+<p> script标签下写</p>
+<p>function创造函数</p>
+<p><strong>同源策略</strong></p>
+<p>检测脚本连接是否与该网站同源，如果不是则拒绝访问（破解：js修改当前页面，不进行跳转页面）</p>
+<p><strong>搭建钓鱼平台</strong></p>
+<p>SMTP服务+gophish钓鱼平台</p>
+<p><strong>修改图标</strong></p>
+<p>resourcehacker软件</p>
+]]></content>
+  </entry>
+  <entry>
     <title>首语</title>
     <url>/2022/08/03/%E9%A6%96%E8%AF%AD/</url>
     <content><![CDATA[<p><strong>大家好！</strong></p>
